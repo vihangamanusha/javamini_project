@@ -84,13 +84,13 @@ VALUES
 
 CREATE TABLE Technical_officer(
      NIC INT,
-     T/O_id CHAR(10),
-     PRIMARY KEY(T/O_id),
+     TO_id CHAR(10),
+     PRIMARY KEY(TO_id),
      FOREIGN KEY (NIC) REFERENCES USER(NIC)
 
 );
 
-INSERT INTO Technical_officer(NIC, T/O_id)
+INSERT INTO Technical_officer(NIC, TO_id)
 VALUES
     (7, 'T001'),
     (8, 'T002'),
@@ -132,6 +132,66 @@ VALUES
 //////////////////////////////////////////////////////////
 
 
+CREATE TABLE Course_unit(
+    Lecture_id CHAR(10),
+    Admin_id CHAR(10),
+    Course_code CHAR(10),
+    CourseName VARCHAR(100),
+    Course_type VARCHAR(20),
+    Theory_hours INT,
+    Practical_hours INT,
+    Credits INT,
+    FOREIGN KEY (Lecture_id) REFERENCES Lecture(Lecture_id),
+    FOREIGN KEY (Admin_id) REFERENCES Admin(Admin_id),
+    PRIMARY KEY(Course_code)   
+);
+
+INSERT INTO Course_unit (Lecture_id, Admin_id, Course_code, CourseName, Course_type, Theory_hours, Practical_hours, Credits)
+VALUES
+('L001','A001','ICT2113', 'Business Economics', '2T+1P', 2, 1, 3),
+('L002','A001','ICT2122', 'Data Structures and Algorithms', '2T', 2, 0, 2),
+('L003','A001','ICT2133', 'Object Oriented Programming', '2T+1P', 2, 1, 3),
+('L004','A001','ICT2142', 'Object Oriented Programming Practicum', '2P', 0, 2, 2),
+('L005','A001','ICT2152', 'Object Oriented Analysis and Design', '2T', 2, 0, 2);
+
+
+///////////////////////////////////////////////////////////////////
+
+
+CREATE TABLE Student_course_unit(
+	Student_id CHAR(10),
+	Course_Code CHAR(10),
+        PRIMARY KEY(Student_id,Course_Code),
+        FOREIGN KEY (Student_id) REFERENCES Student(Student_id),
+        FOREIGN KEY (Course_code) REFERENCES Course_unit(Course_code)
+  
+);
+
+INSERT INTO Student_course_unit (Student_id, Course_Code)
+VALUES
+('S001', 'ICT2113'), ('S001', 'ICT2122'), ('S001', 'ICT2133'), ('S001', 'ICT2142'), ('S001', 'ICT2152'),
+('S002', 'ICT2113'), ('S002', 'ICT2122'), ('S002', 'ICT2133'), ('S002', 'ICT2142'), ('S002', 'ICT2152'),
+('S003', 'ICT2113'), ('S003', 'ICT2122'), ('S003', 'ICT2133'), ('S003', 'ICT2142'), ('S003', 'ICT2152'),
+('S004', 'ICT2113'), ('S004', 'ICT2122'), ('S004', 'ICT2133'), ('S004', 'ICT2142'), ('S004', 'ICT2152'),
+('S005', 'ICT2113'), ('S005', 'ICT2122'), ('S005', 'ICT2133'), ('S005', 'ICT2142'), ('S005', 'ICT2152'),
+('S006', 'ICT2113'), ('S006', 'ICT2122'), ('S006', 'ICT2133'), ('S006', 'ICT2142'), ('S006', 'ICT2152'),
+('S007', 'ICT2113'), ('S007', 'ICT2122'), ('S007', 'ICT2133'), ('S007', 'ICT2142'), ('S007', 'ICT2152'),
+('S008', 'ICT2113'), ('S008', 'ICT2122'), ('S008', 'ICT2133'), ('S008', 'ICT2142'), ('S008', 'ICT2152'),
+('S009', 'ICT2113'), ('S009', 'ICT2122'), ('S009', 'ICT2133'), ('S009', 'ICT2142'), ('S009', 'ICT2152'),
+('S010', 'ICT2113'), ('S010', 'ICT2122'), ('S010', 'ICT2133'), ('S010', 'ICT2142'), ('S010', 'ICT2152'),
+('S011', 'ICT2113'), ('S011', 'ICT2122'), ('S011', 'ICT2133'), ('S011', 'ICT2142'), ('S011', 'ICT2152'),
+('S012', 'ICT2113'), ('S012', 'ICT2122'), ('S012', 'ICT2133'), ('S012', 'ICT2142'), ('S012', 'ICT2152'),
+('S013', 'ICT2113'), ('S013', 'ICT2122'), ('S013', 'ICT2133'), ('S013', 'ICT2142'), ('S013', 'ICT2152'),
+('S014', 'ICT2113'), ('S014', 'ICT2122'), ('S014', 'ICT2133'), ('S014', 'ICT2142'), ('S014', 'ICT2152'),
+('S015', 'ICT2113'), ('S015', 'ICT2122'), ('S015', 'ICT2133'), ('S015', 'ICT2142'), ('S015', 'ICT2152'),
+('S016', 'ICT2113'), ('S016', 'ICT2122'), ('S016', 'ICT2133'), ('S016', 'ICT2142'), ('S016', 'ICT2152'),
+('S017', 'ICT2113'), ('S017', 'ICT2122'), ('S017', 'ICT2133'), ('S017', 'ICT2142'), ('S017', 'ICT2152'),
+('S018', 'ICT2113'), ('S018', 'ICT2122'), ('S018', 'ICT2133'), ('S018', 'ICT2142'), ('S018', 'ICT2152'),
+('S019', 'ICT2113'), ('S019', 'ICT2122'), ('S019', 'ICT2133'), ('S019', 'ICT2142'), ('S019', 'ICT2152'),
+('S020', 'ICT2113'), ('S020', 'ICT2122'), ('S020', 'ICT2133'), ('S020', 'ICT2142'), ('S020', 'ICT2152');
+
+
+////////////////////////////////////////////////////////////////////////////////
 
 
 
