@@ -1,1 +1,138 @@
+CREATE DATABASE Tecmis;
+
+////////////////////////////////////////////////////
+
+CREATE TABLE USER(
+    NIC INT AUTO_INCREMENT,
+    First_Name VARCHAR(50),
+    Last_Name VARCHAR(50),
+    Role VARCHAR(15),
+    Phone_Number INT(10),
+    Email VARCHAR(100),
+    Password VARCHAR(15),
+    PRIMARY KEY(NIC)
+    
+);
+
+INSERT INTO USER (First_Name, Last_Name, Role, Phone_Number, Email, Password)
+VALUES
+('Kumara', 'Perera', 'Lecture', 771234567, 'kumara@example.com', 'pass123'),
+('Fatheema', 'Nazeer', 'Lecture', 772345678, 'fatheema@example.com', 'pass123'),
+('Subramanium', 'Raman', 'Lecture', 773456789, 'subra@example.com', 'pass123'),
+('Mallika', 'Silva', 'Lecture', 774567890, 'mallika@example.com', 'pass123'),
+('Saman', 'Fernando', 'Lecture', 775678901, 'perera@example.com', 'pass123'),
+('Subash', 'Senanayake', 'Admin', 776789012, 'kumara.admin@example.com', 'admin123'),
+('Amal', 'Perera', 'T/O', 777890123, 'amal.to@example.com', 'to123'),
+('Nimali', 'Silva', 'T/O', 778901234, 'nimali@example.com', 'to123'),
+('Kamal', 'Rajapaksa', 'T/O', 779012345, 'kamal@example.com', 'to123'),
+('Dilani', 'Fernando', 'T/O', 770123456, 'dilani@example.com', 'to123'),
+('Nimesh', 'Rathnayaka', 'Student', 771112223, 'nuwan@student.com', 'stu123'),
+('Malith', 'Priyantha', 'Student', 772223334, 'priyantha@student.com', 'stu123'),
+('Nuwani', 'Chathurika', 'Student', 773334445, 'chathurika@student.com', 'stu123'),
+('Malidu', 'Dilshan', 'Student', 774445556, 'dilshan@student.com', 'stu123'),
+('Ravindu', 'Nadeesha', 'Student', 775556667, 'nadeesha@student.com', 'stu123'),
+('Dilan', 'Dinusha', 'Student', 776667778, 'dinusha@student.com', 'stu123'),
+('Raveesha', 'Kavindi', 'Student', 777778889, 'kavindi@student.com', 'stu123'),
+('Nuwani', 'Perera', 'Student', 778889990, 'csperera@student.com', 'stu123'),
+('Wageesha', 'Mahesha', 'Student', 779990001, 'mahesha@student.com', 'stu123'),
+('Pathum', 'Kasun', 'Student', 770001112, 'kasun@student.com', 'stu123'),
+('Sunethra', 'Priyadarshani', 'Student', 771112233, 'priya@student.com', 'stu123'),
+('Chameera', 'Chamika', 'Student', 772223344, 'chamika@student.com', 'stu123'),
+('Suweetha', 'Nethmi', 'Student', 773334455, 'nethmi@student.com', 'stu123'),
+('Nuwan', 'Tharindu', 'Student', 774445566, 'tharindu@student.com', 'stu123'),
+('Shanika', 'Madumali', 'Student', 775556677, 'shanika@student.com', 'stu123'),
+('Pawan', 'Thathsara', 'Student', 776667788, 'manishka@student.com', 'stu123'),
+('Wasantha', 'Kumara', 'Student', 777778899, 'sanjeewa@student.com', 'stu123'),
+('Pinimal', 'Premathilaka', 'Student', 778889900, 'pdshanika@student.com', 'stu123'),
+('Kasun', 'Rajitha', 'Student', 779900011, 'rajitha@student.com', 'stu123'),
+('Vihanga', 'Manusha', 'Student', 770011122, 'kavindu@student.com', 'stu123');
+
+
+//////////////////////////////////////////////////////////
+
+CREATE TABLE Lecture (
+    NIC INT,
+    Lecture_id CHAR(10),
+    PRIMARY KEY (Lecture_id),
+    FOREIGN KEY (NIC) REFERENCES USER(NIC)
+);
+
+INSERT INTO Lecture (NIC, Lecture_id)
+VALUES
+    (1, 'L001'),
+    (2, 'L002'),
+    (3, 'L003'),
+    (4, 'L004'),
+    (5, 'L005');
+
+
+////////////////////////////////////////////////////////////
+
+CREATE TABLE Admin (
+    NIC INT,
+    Admin_id CHAR(10),
+    PRIMARY KEY (Admin_id),
+    FOREIGN KEY (NIC) REFERENCES USER(NIC)
+);
+
+INSERT INTO Lecture (NIC, Lecture_id)
+VALUES
+    (6, 'A001');
+
+
+/////////////////////////////////////////////////////////
+
+CREATE TABLE Technical_officer(
+     NIC INT,
+     T/O_id CHAR(10),
+     PRIMARY KEY(T/O_id),
+     FOREIGN KEY (NIC) REFERENCES USER(NIC)
+
+);
+
+INSERT INTO Technical_officer(NIC, T/O_id)
+VALUES
+    (7, 'T001'),
+    (8, 'T002'),
+    (9, 'T003'),
+    (10,'T004');
+
+/////////////////////////////////////////////////////////
+
+CREATE TABLE Student(
+      NIC INT,
+      Student_id CHAR(10),
+      PRIMARY KEY(Student_id),
+      FOREIGN KEY (NIC) REFERENCES USER(NIC)
+);
+
+INSERT INTO Student (NIC, Student_id)
+VALUES
+    (11, 'S001'),
+    (12, 'S002'),
+    (13, 'S003'),
+    (14, 'S004'),
+    (15, 'S005'),
+    (16, 'S006'),
+    (17, 'S007'),
+    (18, 'S008'),
+    (19, 'S009'),
+    (20, 'S010'),
+    (21, 'S011'),
+    (22, 'S012'),
+    (23, 'S013'),
+    (24, 'S014'),
+    (25, 'S015'),
+    (26, 'S016'),
+    (27, 'S017'),
+    (28, 'S018'),
+    (29, 'S019'),
+    (30, 'S020');
+
+//////////////////////////////////////////////////////////
+
+
+
+
+
 
