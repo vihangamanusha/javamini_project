@@ -102,8 +102,10 @@ VALUES
 CREATE TABLE Student(
       NIC INT,
       Student_id CHAR(10),
+      Timetable_id CHAR(10),
       PRIMARY KEY(Student_id),
-      FOREIGN KEY (NIC) REFERENCES USER(NIC)
+      FOREIGN KEY (NIC) REFERENCES USER(NIC),
+      FOREIGN KEY (Timetable_id) REFERENCES Timetable(Timetable_id).
 );
 
 INSERT INTO Student (NIC, Student_id)
@@ -408,7 +410,7 @@ VALUES
     ('M004','ICT2113','S014','','2025.03.06','Approved','2025.03.01','2025.03.15','migraines'),
     ('M005','ICT2142','S019','','2025.04.05','Not-Approved','2025.04.01','2025.04.14','Viral Infections');
 
-
+/////////////////////////////////////////////////////////////////////
 CREATE TABLE Lecturer_Medical(
 	Lecturer_id CHAR(10),
 	Medical_id CHAR(10),
@@ -418,5 +420,75 @@ CREATE TABLE Lecturer_Medical(
   
 );
 
+//////////////////////////////////////////////////////////
 
+CREATE TABLE Timetable(
+	Timetable_id CHAR(10),
+        Admin_id CHAR(10),
+        Content LONGTEXT,
+        PRIMARY KEY(Timetable_id),
+        FOREIGN KEY (Admin_id) REFERENCES Admin(Admin_id)
+         
+);
+*********DATA danna
+
+////////////////////////////////////////////////////////////
+
+CREATE TABLE Timetable_TO_0fficer (
+	Timetable_id CHAR(10),
+	TO_id CHAR(10),
+        PRIMARY KEY(Timetable_id,TO_id),
+        FOREIGN KEY (Timetable_id) REFERENCES Timetable(Timetable_id),
+        FOREIGN KEY (TO_id) REFERENCES Technical_officer(TO_id)
+  
+);
+
+
+///////////////////////////////////////////////////
+
+CREATE TABLE Notice(
+	Notice_id CHAR(10),
+        Title VARCHAR(50),
+        Admin_id CHAR(10),
+        PRIMARY KEY(Notice_id),
+        FOREIGN KEY (Admin_id) REFERENCES Admin(Admin_id)
+         
+);
+
+****DATA DANNA
+
+
+/////////////////////////////////////////////////////////
+
+CREATE TABLE Notice_Lecturer(
+	Notice_id CHAR(10),
+	Lecturer_id CHAR(10),
+        PRIMARY KEY(Notice_id,Lecturer_id),
+        FOREIGN KEY (Notice_id) REFERENCES Notice(Notice_id),
+        FOREIGN KEY (Lecturer_id) REFERENCES Lecturer(Lecturer_id)
+          
+);
+
+///////////////////////////////////////////////////////////
+
+
+CREATE TABLE Notice_Student(
+	Notice_id CHAR(10),
+	Student_id CHAR(10),
+        PRIMARY KEY(Notice_id,Student_id),
+        FOREIGN KEY (Notice_id) REFERENCES Notice(Notice_id),
+        FOREIGN KEY (Student_id) REFERENCES Student(Student_id)
+          
+);
+
+//////////////////////////////////////////////////////
+
+CREATE TABLE Notice_TO_Officer(
+	Notice_id CHAR(10),
+	TO_id CHAR(10),
+        PRIMARY KEY(Notice_id,TO_id),
+        FOREIGN KEY (Notice_id) REFERENCES Notice(Notice_id),
+        FOREIGN KEY (TO_id) REFERENCES Technical_officer(TO_id)
+          
+);
 
