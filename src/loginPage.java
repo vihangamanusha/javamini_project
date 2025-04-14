@@ -42,11 +42,11 @@ public class loginPage {
                     ResultSet rs = pst.executeQuery();
 
                     if (rs.next()) {
-                        JOptionPane.showMessageDialog(null, "Login successful!");
+                        //JOptionPane.showMessageDialog(null, "Login successful!");
                         conn.close();
 
                         // Open next page
-                        openNextPage();
+                        new adminPage();
                     } else {
                         JOptionPane.showMessageDialog(null, "Invalid username or password.");
                     }
@@ -56,17 +56,12 @@ public class loginPage {
                     JOptionPane.showMessageDialog(null, "Database error: " + ex.getMessage());
                 }
             }
+
+
         });
     }
 
-    private void openNextPage() {
-        JFrame frame = new JFrame("Welcome Page");
-        JLabel label = new JLabel("Welcome, you are logged in!", SwingConstants.CENTER);
-        frame.add(label);
-        frame.setSize(300, 150);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setVisible(true);
-    }
+
 
     public static void main(String[] args) {
         JFrame frame = new JFrame("Login Page");
