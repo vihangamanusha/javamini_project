@@ -18,9 +18,24 @@ public adminPage() {
     JFrame frame = new JFrame("Admin Page");
     frame.setContentPane(adminPage);
     frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-    frame.setSize(1000, 400);
+    frame.setSize(1000, 500);
     frame.setResizable(false);// or use frame.pack()
     frame.setVisible(true);
+    logOutButton.addActionListener(new ActionListener() {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+
+                frame.dispose(); //  close current window
+                new loginPage().showLoginFrame(); // open login page again
+            }
+
+    });
+    editUserButton.addActionListener(new ActionListener() {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            new edit_user();
+        }
+    });
 }
 }
 

@@ -71,4 +71,7 @@ public class loginPage {
         frame.pack();
         frame.setVisible(true);
     }
+
+    public void showLoginFrame() {
+    }
 }
