@@ -36,6 +36,12 @@ public adminPage() {
             new edit_user();
         }
     });
+    userbutton.addActionListener(new ActionListener() {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            new UserMnagementPage();
+        }
+    });
 }
 }
 

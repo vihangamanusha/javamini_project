@@ -11,7 +11,7 @@ public class edit_user {
     private JTextField password;
     private JTextField photo;
     private JButton uploadButton;
-    private JButton SUBMITCHANGEButton;
+    private JButton UPDATEButton;
     private JButton RESETButton;
     private JButton button1;
 
@@ -34,6 +34,12 @@ public class edit_user {
                 password.setText("");
                 photo.setText("");
 
+            }
+        });
+        button1.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                new adminPage();
             }
         });
     }
