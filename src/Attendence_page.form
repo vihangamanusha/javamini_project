@@ -22,7 +22,7 @@
           <text value="INSERT ATTENDANCE PORTRAL"/>
         </properties>
       </component>
-      <grid id="c480c" layout-manager="GridLayoutManager" row-count="5" column-count="8" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+      <grid id="c480c" layout-manager="GridLayoutManager" row-count="4" column-count="8" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
         <margin top="20" left="20" bottom="20" right="20"/>
         <constraints>
           <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false">
@@ -35,14 +35,6 @@
           <title-color color="-16250872"/>
         </border>
         <children>
-          <component id="66eb8" class="javax.swing.JFormattedTextField" binding="formattedTextField1" default-binding="true">
-            <constraints>
-              <grid row="2" column="2" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="8" fill="0" indent="0" use-parent-layout="false">
-                <preferred-size width="150" height="30"/>
-              </grid>
-            </constraints>
-            <properties/>
-          </component>
           <component id="bd2cb" class="javax.swing.JLabel">
             <constraints>
               <grid row="0" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
@@ -61,26 +53,6 @@
             </constraints>
             <properties>
               <text value="Department"/>
-            </properties>
-          </component>
-          <component id="1aa15" class="javax.swing.JComboBox" binding="ctype">
-            <constraints>
-              <grid row="3" column="2" row-span="1" col-span="2" vsize-policy="0" hsize-policy="2" anchor="8" fill="0" indent="0" use-parent-layout="false">
-                <preferred-size width="150" height="30"/>
-              </grid>
-            </constraints>
-            <properties>
-              <model/>
-            </properties>
-          </component>
-          <component id="7d1f9" class="javax.swing.JComboBox" binding="cid">
-            <constraints>
-              <grid row="1" column="2" row-span="1" col-span="2" vsize-policy="0" hsize-policy="2" anchor="8" fill="0" indent="0" use-parent-layout="false">
-                <preferred-size width="150" height="30"/>
-              </grid>
-            </constraints>
-            <properties>
-              <model/>
             </properties>
           </component>
           <component id="2756e" class="javax.swing.JComboBox" binding="department">
@@ -109,48 +81,6 @@
               <text value="Attendance Type "/>
             </properties>
           </component>
-          <component id="a2c93" class="javax.swing.JLabel">
-            <constraints>
-              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
-                <preferred-size width="70" height="17"/>
-              </grid>
-            </constraints>
-            <properties>
-              <text value="Student ID"/>
-            </properties>
-          </component>
-          <component id="5a6b5" class="javax.swing.JLabel">
-            <constraints>
-              <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-            </constraints>
-            <properties>
-              <text value="Course ID"/>
-            </properties>
-          </component>
-          <component id="44121" class="javax.swing.JLabel" binding="date">
-            <constraints>
-              <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-            </constraints>
-            <properties>
-              <text value="Date"/>
-            </properties>
-          </component>
-          <component id="da4e1" class="javax.swing.JLabel">
-            <constraints>
-              <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-            </constraints>
-            <properties>
-              <text value="Course Type "/>
-            </properties>
-          </component>
-          <component id="c33cf" class="javax.swing.JTextField" binding="sid">
-            <constraints>
-              <grid row="0" column="2" row-span="1" col-span="2" vsize-policy="0" hsize-policy="2" anchor="8" fill="0" indent="0" use-parent-layout="false">
-                <preferred-size width="150" height="30"/>
-              </grid>
-            </constraints>
-            <properties/>
-          </component>
           <component id="bc75c" class="javax.swing.JComboBox" binding="semester">
             <constraints>
               <grid row="0" column="6" row-span="1" col-span="2" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false">
@@ -161,7 +91,7 @@
           </component>
           <component id="e335" class="javax.swing.JButton" binding="resetBtn">
             <constraints>
-              <grid row="4" column="7" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+              <grid row="3" column="7" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
               <text value="Reset"/>
@@ -174,10 +104,80 @@
           </hspacer>
           <component id="9734b" class="javax.swing.JButton" binding="InsertBtn">
             <constraints>
-              <grid row="4" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+              <grid row="3" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
               <text value="Insert"/>
+            </properties>
+          </component>
+          <component id="c33cf" class="javax.swing.JTextField" binding="sid">
+            <constraints>
+              <grid row="3" column="2" row-span="1" col-span="2" vsize-policy="0" hsize-policy="2" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="30"/>
+              </grid>
+            </constraints>
+            <properties/>
+          </component>
+          <component id="a2c93" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                <preferred-size width="70" height="17"/>
+              </grid>
+            </constraints>
+            <properties>
+              <text value="Student ID"/>
+            </properties>
+          </component>
+          <component id="5a6b5" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="Course ID"/>
+            </properties>
+          </component>
+          <component id="7d1f9" class="javax.swing.JComboBox" binding="cid">
+            <constraints>
+              <grid row="0" column="2" row-span="1" col-span="2" vsize-policy="0" hsize-policy="2" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="30"/>
+              </grid>
+            </constraints>
+            <properties>
+              <model/>
+            </properties>
+          </component>
+          <component id="44121" class="javax.swing.JLabel" binding="date">
+            <constraints>
+              <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="Date"/>
+            </properties>
+          </component>
+          <component id="66eb8" class="javax.swing.JFormattedTextField" binding="formattedTextField1" default-binding="true">
+            <constraints>
+              <grid row="1" column="2" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="30"/>
+              </grid>
+            </constraints>
+            <properties/>
+          </component>
+          <component id="da4e1" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="Course Type "/>
+            </properties>
+          </component>
+          <component id="1aa15" class="javax.swing.JComboBox" binding="ctype">
+            <constraints>
+              <grid row="2" column="2" row-span="1" col-span="2" vsize-policy="0" hsize-policy="2" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="30"/>
+              </grid>
+            </constraints>
+            <properties>
+              <model/>
             </properties>
           </component>
         </children>
