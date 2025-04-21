@@ -16,7 +16,7 @@ public class loginPage {
             public void actionPerformed(ActionEvent e) {
                 username.setText("");
                 passwordField1.setText("");
-                //efwfwk
+                //e
             }
         });
 

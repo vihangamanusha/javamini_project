@@ -27,7 +27,7 @@ public adminPage() {
         public void actionPerformed(ActionEvent e) {
 
                 frame.dispose(); //  close current window
-                new loginPage().showLoginFrame(); // open login page again
+                new loginPage().showLoginFrame(); // open login page againj
             }
 
     });
