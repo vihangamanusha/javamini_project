@@ -63,14 +63,18 @@ public class loginPage {
 
 
 
+
     public static void main(String[] args) {
         JFrame frame = new JFrame("Login Page");
         frame.setContentPane(new loginPage().loginpage);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setResizable(false);
-        frame.pack();
-        frame.setVisible(true);
+
+        frame.pack();                       // Step 1: Set preferred size
+        frame.setLocationRelativeTo(null); // Step 2: Center it on screen
+        frame.setVisible(true);            // Step 3: Make it visible
     }
+
 
     public void showLoginFrame() {
     }

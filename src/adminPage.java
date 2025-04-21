@@ -20,6 +20,7 @@ public adminPage() {
     frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     frame.setSize(1000, 500);
     frame.setResizable(false);// or use frame.pack()
+    frame.setLocationRelativeTo(null);
     frame.setVisible(true);
     logOutButton.addActionListener(new ActionListener() {
         @Override
@@ -33,13 +34,24 @@ public adminPage() {
     editUserButton.addActionListener(new ActionListener() {
         @Override
         public void actionPerformed(ActionEvent e) {
+            frame.dispose();
             new edit_user();
         }
     });
+
+
     userbutton.addActionListener(new ActionListener() {
         @Override
         public void actionPerformed(ActionEvent e) {
+            frame.dispose();
             new UserMnagementPage();
+        }
+    });
+    Notification.addActionListener(new ActionListener() {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            frame.dispose();
+            new notificationpage();
         }
     });
 }

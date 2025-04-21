@@ -20,7 +20,8 @@ public class edit_user {
         frame.setContentPane(edituserPage);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(1000, 500);
-        frame.setResizable(false);
+        frame.setLocationRelativeTo(null);
+        //frame.setResizable(false);
         frame.setVisible(true);
 
 
@@ -39,6 +40,7 @@ public class edit_user {
         button1.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                frame.dispose();
                 new adminPage();
             }
         });
